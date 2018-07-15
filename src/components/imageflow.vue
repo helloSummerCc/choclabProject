@@ -1,6 +1,9 @@
 <template>
  <div class="imageflow">
  	<img src="../assets/list/listbg.jpg" class="bgImg">
+  <div class="logoImg">
+    <img src="../assets/list/logo.png" class="logo"> 
+  </div>
  	<router-view/>
  	<Banner/>
  </div>
@@ -8,14 +11,10 @@
 
 <script>
   import Banner from './common/banner';
-  import WaterFlow from './common/waterflow';
-  import MapFlow from './common/mapflow';
 export default {
   name: 'ImageFlow',
   components: {
-  	Banner,
-  	WaterFlow,
-  	MapFlow
+  	Banner
   },
   data () {
     return {
@@ -29,11 +28,20 @@ export default {
 .imageflow {
 	height: auto;
 	width: 100%;
-	/* background: url('../assets/list/listbg.jpg') no-repeat; */
 }
 .bgImg {
 	z-index: -1;
 	position: fixed;
 	top: 0;
+}
+.logoImg {
+  display: initial;
+  width: 100%;
+  height: 80px;
+}
+.logo {
+  width: 160px;
+  margin:10px;
+  float: right;
 }
 </style>

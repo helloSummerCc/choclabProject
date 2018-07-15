@@ -1,15 +1,11 @@
 <template>
   <div class="water-flow">
-  	<div class="logoImg">
-    <img src="../../assets/list/logo.png" class="logo">	
-  	</div>
     <div class="right-list-image">
-      <div v-for="(image, index) in listImg">
+      <div v-for="(image, index) in listImg" class="image-box">
         <router-link :to="`/flow/details/${index+1}`">
           <img :id="`${index+1}`" :src="image"  class="image">
         </router-link>
       </div>
-   
     </div>
   </div>
 </template>
@@ -29,7 +25,6 @@ export default {
       	'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3283028995,286940667&fm=27&gp=0.jpg',
       	'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1090826827,4020208272&fm=27&gp=0.jpg'
       ]
-      // msg: 'Welcome to Your WaterFlow'
     }
   },
   methods: {
@@ -37,8 +32,10 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.image-box {
+  display: inline-block;
+}
 .water-flow {
 	width: 100%;
 	height: auto;
@@ -49,17 +46,10 @@ export default {
 	width: 100%;
 	height: auto;
 }
-.logoImg {
-	width: 100%;
-	height: 80px;
-}
+
 .image {
 	margin-top: 10px;
 	margin-right: 10px;
 }
-.logo {
-	/* width: 225px;
-	height: 100%; */
-	float: right;
-}
+
 </style>
