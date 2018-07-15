@@ -3,8 +3,6 @@
  	<img src="../assets/list/listbg.jpg" class="bgImg">
  	<router-view/>
  	<Banner/>
- 	<WaterFlow/>
- 	<!-- <MapFlow/> -->
  </div>
 </template>
 

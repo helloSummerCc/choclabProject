@@ -4,7 +4,12 @@
     <img src="../../assets/list/logo.png" class="logo">	
   	</div>
     <div class="right-list-image">
-      <img :src="image" v-for="image in listImg" class="image">
+      <div v-for="(image, index) in listImg">
+        <router-link :to="`/flow/details/${index+1}`">
+          <img :id="`${index+1}`" :src="image"  class="image">
+        </router-link>
+      </div>
+   
     </div>
   </div>
 </template>
@@ -26,6 +31,8 @@ export default {
       ]
       // msg: 'Welcome to Your WaterFlow'
     }
+  },
+  methods: {
   }
 }
 </script>
