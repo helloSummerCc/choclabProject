@@ -43,6 +43,9 @@ export default {
   methods: {
   	letterClick(index) {
 	  this.active = index;
+	  if(index === 5){
+	  	this.$router.push('/flow/map');
+	  }
 	  window.scrollTo(0,300*index);
   	},
   	scrollTo(){
