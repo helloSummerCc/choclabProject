@@ -1,5 +1,5 @@
 <template>
- <div>{{msg}}</div>
+ <div></div>
 </template>
 
 <script>
@@ -7,7 +7,6 @@ export default {
   name: 'PicDetail',
   data () {
     return {
-      msg: 'Welcome to Your PicDetail'
     }
   }
 }

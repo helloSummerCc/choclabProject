@@ -1,21 +1,20 @@
 <template>
-  <div class="imageflow">
-    <Banner/>
-    <!-- <img src="../assets/list/listbg.jpg" class="bgImg">    -->
-    <WaterFlow/>
+ <div class="imageflow">
+ 	<!-- <img src="../assets/list/listbg.jpg" class="bgImg"> -->
+  <div class="logoImg">
+    <img src="../assets/list/logo.png" class="logo"> 
   </div>
+ 	<router-view/>
+ 	<Banner/>
+ </div>
 </template>
 
 <script>
   import Banner from './common/banner';
-  import WaterFlow from './common/waterflow';
-  import MapFlow from './common/mapflow';
 export default {
   name: 'ImageFlow',
   components: {
-  	Banner,
-  	WaterFlow,
-  	MapFlow
+  	Banner
   },
   data () {
     return {
@@ -27,9 +26,26 @@ export default {
 
 <style scoped>
 .imageflow {
-  height: 500%;
-	width: auto;
-	background: url('../assets/list/listbg.jpg'); 
-  background-repeat: repeat-y;
+  min-height: 100%;
+  /*width: 80%;*/
+  margin: 0 auto;
+  /*background: url('../assets/list/listbg.jpg'); */
+  background: url('../assets/list/20180715201958.png'); 
+  /*background-repeat: repeat-y;*/
+}
+.bgImg {
+	z-index: -1;
+	position: fixed;
+	top: 0;
+}
+.logoImg {
+  position: absolute;
+  width: 100%;
+  height: 80px;
+}
+.logo {
+  width: 160px;
+  margin:10px;
+  float: right;
 }
 </style>

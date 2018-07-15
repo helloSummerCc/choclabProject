@@ -4,7 +4,7 @@ import Index from '@/components/index'
 import ImageFlow from '@/components/imageflow'
 import PicDetail from '@/components/common/picdetail'
 import MapFlow from '@/components/common/mapflow'
-
+import WaterFlow from '@/components/common/waterflow'
 Vue.use(Router)
 
 export default new Router({
@@ -22,6 +22,10 @@ export default new Router({
       path: '/flow',
       component: ImageFlow,
       children: [
+        {
+          path: '',
+          component: WaterFlow
+        },
         {
           path: 'details/:id',
           component: PicDetail
