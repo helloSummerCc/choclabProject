@@ -50,10 +50,9 @@ export default {
 	width: 50px;
 	height: 350px;
 	display: inline-block;
-	/* position: absolute; */
-	/* position: fixed; */
-	/* top: 0;
-	left: 0; */
+	position: fixed;
+	top: 0;
+	left: 0; 
 	background: #084b81;
 }
 .letter-box {
