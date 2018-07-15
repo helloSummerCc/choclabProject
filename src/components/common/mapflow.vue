@@ -5,10 +5,11 @@
     </div>
 
  	<div class='mapFlow'>
-	    <div v-for="(image, index) in listImg" 
+ 		<div v-for="(image, index) in listImg" 
 	    :class="['mapBox', {'rightZero': (index+1) % 3 == 0}]">
           <img :src="image" class="imageDetail" />
-        </div>
+ 	</div>
+	    
  	</div>
  </div>
 </template>
@@ -24,6 +25,11 @@
   	height: 720px;
   	background-image: url('../../assets/map/map.jpg');
   	background-size: 100%;
+  	background-repeat: no-repeat;
+  }
+  .mapFlow{
+  	width: 1280px;
+    margin: 0 auto;
   }
   .mapBox{
   	display: inline-block;

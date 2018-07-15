@@ -26,7 +26,7 @@ body{
   height:100%;
 }
 .container-fluid {
-  height: 100%;
+  min-height: 100%;
   padding: 0!important;
 }
 </style>

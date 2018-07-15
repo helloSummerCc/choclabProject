@@ -31,11 +31,6 @@ export default {
 	width: 100%;
   background-image: url('../assets/list/listbg.jpg');
 }
-.imageContent{
-  width: 1280px;
-  height: 100%;
-  margin: 0 auto;
-}
 .logoImg {
   display: initial;
   width: 100%;

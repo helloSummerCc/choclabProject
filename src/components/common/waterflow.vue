@@ -41,7 +41,8 @@ export default {
 	height: auto;
 }
 .right-list-image {
-	width: 100%;
+	width: 1280px;
+  margin: 0 auto;
 	height: auto;
 }
 
