@@ -36,9 +36,33 @@ export default {
       ]
     }
   },
+  mounted () {
+    this.scrollTo();
+     window.addEventListener('scroll',this.scrollTo);
+  },
   methods: {
   	letterClick(index) {
-  		this.active = index;
+	  this.active = index;
+	  if(index === 5){
+	  	this.$router.push('/flow/map');
+	  }
+	  window.scrollTo(0,300*index);
+  	},
+  	scrollTo(){
+      let scrollTop = document.body.scrollTop;
+      let count = scrollTop/300;
+      if (count > 1 && count <= 2) {
+      	this.active = 1;
+      } else if (count > 2 && count <= 3) {
+      	this.active = 2;
+      }else if (count > 3 && count <= 4) {
+      	this.active = 3;
+      }else if (count > 4 && count <= 5) {
+      	this.active = 4;
+      }else if (count < 1 ) {
+      	this.active = 0;
+      }
+      console.log(this.active)
   	}
   }
 }
@@ -49,9 +73,9 @@ export default {
 	z-index: 999;
 	width: 50px;
 	height: 350px;
+	display: inline-block;
 	position: fixed;
-	top: 0;
-	left: 0; 
+	top: 0; 
 	background: #084b81;
 }
 .letter-box {

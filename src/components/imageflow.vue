@@ -32,7 +32,7 @@ export default {
   background-image: url('../assets/list/listbg.jpg');
 }
 .logoImg {
-  display: initial;
+  position: absolute;
   width: 100%;
   height: 80px;
 }
