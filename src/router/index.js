@@ -12,22 +12,23 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Index',
-      component: Index,
-      children: [
-      	{
-      		path: 'flow:id',
-      		comonent: ImageFlow
-      	},
-      	{
-      		path: 'details:id',
-      		comonent: PicDetail	
-      	},
-      	{
-      		path: 'map',
-      		comonent: MapFlow	
-      	}
-      ]
-    }
+      redirect: '/index'
+    },
+    {
+      path: '/index',
+      component: Index
+    },
+    {
+      path: '/flow',
+      component: ImageFlow
+    },
+    {
+      path: '/details/:id',
+      component: PicDetail
+    },
+    {
+       path: 'map',
+       component: MapFlow  
+     }
   ]
 })

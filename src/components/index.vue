@@ -1,6 +1,8 @@
 <template>
-  <div class="index-page" @click="mChangeCount">
-
+  <div class="index-page">
+    <router-link to="flow">
+      <div class="index-page-img"></div>
+    </router-link>
   </div>
 </template>
 
@@ -22,13 +24,10 @@ export default {
 
 <style>
 .index-page {
-  width: 100%;
   height: 100%;
-  padding: 0!important;
-  background: url('../assets/index.jpg') 0 0 / 100% 100% no-repeat; 
 }
-img {
-  width: 100%;
+.index-page-img {
   height: 100%;
+  background: url('../assets/index.jpg') 0 0 / 100% 100% no-repeat;
 }
 </style>

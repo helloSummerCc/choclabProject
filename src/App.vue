@@ -21,5 +21,6 @@ html, body {
 }
 .container-fluid {
   height: 100%;
+  padding: 0!important;
 }
 </style>
