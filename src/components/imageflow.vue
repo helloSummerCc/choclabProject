@@ -9,11 +9,13 @@
 <script>
   import Banner from './common/banner';
   import WaterFlow from './common/waterflow';
+  import MapFlow from './common/mapflow';
 export default {
   name: 'ImageFlow',
   components: {
   	Banner,
-  	WaterFlow
+  	WaterFlow,
+  	MapFlow
   },
   data () {
     return {
@@ -25,13 +27,9 @@ export default {
 
 <style scoped>
 .imageflow {
-  height: 8000px;
-	/*width: 300px;*/
+  height: 500%;
+	width: auto;
 	background: url('../assets/list/listbg.jpg'); 
   background-repeat: repeat-y;
 }
-/*.bgImg {
-	position: fixed;
-	top: 0;
-}*/
 </style>

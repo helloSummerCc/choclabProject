@@ -1,10 +1,40 @@
 <template>
   <div class="water-flow">
   	<div class="logoImg">
-    <img src="../../assets/list/logo.png" class="logo">	
+      <!-- <img src="../../assets/list/logo.png" class="logo">	 -->
   	</div>
     <div class="right-list-image">
-      <img :src="image" v-for="image in listImg" class="image">
+      <!-- <img :src="image" v-for="image in listImg" class="image"> -->
+      <!-- <img src="../../assets/listpic/pic-ori-24.jpg" class="image">
+      <img src="../../assets/listpic/pic-ori-25.jpg" class="image">
+      <img src="../../assets/listpic/pic-ori-26.jpg" class="image">
+      <img src="../../assets/listpic/pic-ori-27.jpg" class="image">
+      <img src="../../assets/listpic/pic-ori-28.jpg" class="image">
+      <img src="../../assets/listpic/pic-ori-29.jpg" class="image">
+      <img src="../../assets/listpic/pic-ori-30.jpg" class="image"> -->
+     <div class="waterfall">
+        <div class="item">
+          <img src="../../assets/listpic/pic-ori-24.jpg">
+        </div>
+        <div class="item">
+          <img src="../../assets/listpic/pic-ori-25.jpg">
+        </div>
+        <div class="item">
+          <img src="../../assets/listpic/pic-ori-26.jpg">
+        </div>
+        <div class="item">
+          <img src="../../assets/listpic/pic-ori-27.jpg">
+        </div>
+        <div class="item">
+          <img src="../../assets/listpic/pic-ori-28.jpg">
+        </div>
+        <div class="item">
+          <img src="../../assets/listpic/pic-ori-29.jpg">
+        </div>
+        <div class="item">
+          <img src="../../assets/listpic/pic-ori-30.jpg">
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -15,16 +45,24 @@ export default {
   data () {
     return {
       listImg: [
-      	'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=263937947,2660722386&fm=27&gp=0.jpg',
-      	'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1126160441,2466745188&fm=27&gp=0.jpg',
-      	'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3148149734,612769710&fm=27&gp=0.jpg',
-      	'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=503834790,3232427896&fm=27&gp=0.jpg',
-      	'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3282403731,2457621927&fm=27&gp=0.jpg',
-      	'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3751673649,378615754&fm=27&gp=0.jpg',
-      	'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3283028995,286940667&fm=27&gp=0.jpg',
-      	'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1090826827,4020208272&fm=27&gp=0.jpg'
+      	'../../assets/listpic/pic-ori-24.jpg',
+        '../../assets/listpic/pic-ori-25.jpg',
+        '../../assets/listpic/pic-ori-26.jpg',
+        '../../assets/listpic/pic-ori-27.jpg',
+        '../../assets/listpic/pic-ori-28.jpg',
+        '../../assets/listpic/pic-ori-29.jpg',
+        '../../assets/listpic/pic-ori-30.jpg'
       ]
       // msg: 'Welcome to Your WaterFlow'
+    }
+  },
+  mounted () {
+    // this.getNaturalWidth();
+  },
+  methods: {
+    getNaturalWidth: function () {
+      const w = document.getElementsByClassName("image")[0].naturalWidth;
+      console.log('w',w)
     }
   }
 }
@@ -33,10 +71,11 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .water-flow {
-	width: 100%;
+	width: auto;
 	height: auto;
 	position: absolute;
 	top: 0;
+  left: 70px;
 }
 .right-list-image {
 	width: 100%;
@@ -49,10 +88,34 @@ export default {
 .image {
 	margin-top: 10px;
 	margin-right: 10px;
+  width: 50%;
+  height: 50%;
 }
 .logo {
 	/* width: 225px;
 	height: 100%; */
 	float: right;
 }
+.container{width:80%;margin: 0 auto;}
+    /*瀑布流层*/
+    .waterfall{
+      -moz-column-count:auto; /* Firefox */
+      -webkit-column-count:auto; /* Safari 和 Chrome */
+      column-count:auto;
+      -moz-column-gap: 1em;
+      -webkit-column-gap: 1em;
+      column-gap: 1em;
+    }
+    /*一个内容层*/
+    .item{
+      padding: 1em;
+      margin: 0 0 1em 0;
+      -moz-page-break-inside: avoid;
+      -webkit-column-break-inside: avoid;
+      break-inside: avoid;
+    }
+    .item img{
+        width: 100%;
+        margin-bottom:10px;
+    }
 </style>
