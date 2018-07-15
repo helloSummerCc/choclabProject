@@ -39,8 +39,6 @@ export default {
 .water-flow {
 	width: 100%;
 	height: auto;
-	position: absolute;
-	top: 0;
 }
 .right-list-image {
 	width: 100%;
