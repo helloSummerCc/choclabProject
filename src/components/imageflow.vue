@@ -1,9 +1,9 @@
 <template>
- <div class="imageflow">
- 	<img src="../assets/list/listbg.jpg" class="bgImg">
- 	<Banner/>
- 	<WaterFlow/>
- </div>
+  <div class="imageflow">
+    <Banner/>
+    <!-- <img src="../assets/list/listbg.jpg" class="bgImg">    -->
+    <WaterFlow/>
+  </div>
 </template>
 
 <script>
@@ -25,12 +25,13 @@ export default {
 
 <style scoped>
 .imageflow {
-	height: auto;
-	width: 100%;
-	/* background: url('../assets/list/listbg.jpg') no-repeat; */
+  height: 8000px;
+	/*width: 300px;*/
+	background: url('../assets/list/listbg.jpg'); 
+  background-repeat: repeat-y;
 }
-.bgImg {
+/*.bgImg {
 	position: fixed;
 	top: 0;
-}
+}*/
 </style>
