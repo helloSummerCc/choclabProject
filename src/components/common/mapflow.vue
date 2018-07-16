@@ -34,8 +34,16 @@
   	background-size: 100% 100%;
   	background-repeat: no-repeat;
   }
+  .mapFlow:after{
+    content:".";
+    clear:both;
+    display:block;
+    height:0;
+    overflow:hidden;
+    visibility:hidden;
+  }
   .mapBox{
-  	display: inline-block;
+  	float:left;
   	width: 408px;
   	height: 450px;
   	margin-bottom: 8px;
