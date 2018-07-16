@@ -4,15 +4,20 @@ Vue.use(Vuex)
  
 export default new Vuex.Store({
   state:{
-    count:0
+    maskInfo: {
+      lock: false,
+      imgPath: ''
+    }
+
   },
   mutations:{
-    increment:state => state.count ++,
-    decrement:state => state.count --,
+    maskInfo: function(state,data) {
+      state.maskInfo = data;
+    }
   },
   actions:{
-  	increment: function ({commit, state}, data) {
-  		commit('increment');
+  	uMaskInfo: function ({commit, state}, data) {
+  		commit('maskInfo', data);
   	}
   }
 })

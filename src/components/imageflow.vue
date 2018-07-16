@@ -29,7 +29,7 @@ export default {
 .imageflow {
 	min-height: 100%;
 	width: 100%;
-  background-image: url('../assets/list/listbg.jpg');
+  background-image: url('https://gw.alipayobjects.com/zos/rmsportal/sktoOFNQvgFTptwMMMUp.jpg');
 }
 .logoImg {
   position: absolute;
