@@ -35,4 +35,10 @@ body{
   height: 100%;
   padding: 0!important;
 }
+.vue-directive-image-previewer-body {
+  position: relative;
+}
+.vue-directive-image-previewer-body img {
+  cursor: -webkit-zoom-out!important;
+}
 </style>

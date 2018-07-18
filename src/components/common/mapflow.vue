@@ -10,9 +10,6 @@
         <MapFlowList :data="image" />
  	  </div>
  	</div>
-  <div class="bigImgMask" v-show="maskInfo.lock">
-      <img class="maskCont" :src="maskInfo.imgPath"/>
-  </div>
  </div>
 </template>
 
@@ -44,10 +41,10 @@
   }
   .mapBox{
   	float:left;
-  	width: 408px;
-  	height: 450px;
-  	margin-bottom: 8px;
-  	margin-right: 8px;
+  	width: 400px;
+  	height: 420px;
+  	margin-bottom: 20px;
+  	margin-right: 20px;
   }
   @media screen and (max-width: 1190px){
     .mapWrapper{
@@ -57,7 +54,7 @@
     }
     .mapBox{
       width: 326px;
-      height: 350px;
+      height: 330px;
       margin-bottom: 6px;
       margin-right: 6px;
     }
@@ -67,23 +64,6 @@
   }
   .rightZero {
     margin-right: 0;
-  }
-  .bigImgMask{
-    position: fixed;
-    left: 0;
-    top:0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.5);
-    z-index: 10000;
-  }
-  .maskCont{
-    position: fixed;
-    right: 0;
-    left: 0;
-    top:0;
-    bottom: 0;
-    margin :auto;
   }
 </style>
 <script>
@@ -97,9 +77,7 @@ export default {
     }
   },
   computed: {
-    maskInfo() {
-      return this.$store.state.maskInfo;
-    }
+    
   },
   components: {
     MapFlowList
