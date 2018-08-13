@@ -21,13 +21,12 @@
   }
   .mapCont{
      background-color: #fff;
-     padding-top: 50px;
-     padding-bottom: 25px;
+     margin-bottom: 20px;
   }
  .mapImage {
   	width: 100%;
     height: 720px;
-  	background-image: url('../../assets/map/map.jpg');
+  	background-image: url('http://www.choclab.com.cn/img/store/map-position.jpg');
   	background-size: 100% 100%;
   	background-repeat: no-repeat;
   }
